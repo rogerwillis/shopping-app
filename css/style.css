@@ -5,7 +5,7 @@ color:#fff;
 
 }
 .container-fluid.well{background:#000;}
-
+.logo{margin:30px;}
 
 .item {border-bottom: 1px solid #ccc; padding:22px 10px 13px 10px;}
 .item:hover {background:#f5f5f5; cursor:pointer}
