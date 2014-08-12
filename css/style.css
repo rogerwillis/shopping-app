@@ -1,0 +1,27 @@
+.lead-section {
+padding: 40px 15px 0px 0;
+text-align: center;
+}
+.item {border-bottom: 1px solid #ccc; padding:22px 10px 13px 10px;}
+.item:hover {background:#f5f5f5; cursor:pointer}
+.item-status {float:left;}
+.item-delete {float:right;}
+
+.item-status.no-checkmark { background:url(../images/checkmark-inactive.png);width: 21px;
+height: 19px;cursor:pointer;}
+
+.item-status.checkmark { background:url(../images/checkmark-active.png);width: 21px;
+height: 19px; cursor:pointer;}
+
+.item-delete{ background: url(../images/delete.png) no-repeat;
+width: 30px;
+height: 30px;
+cursor: pointer;
+}
+
+.item-delete:hover, .item-status:hover {opacity:.3;}
+
+/*BS overrides*/
+
+.form-control {
+	height: 47px; }

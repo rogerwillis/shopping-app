@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Shopper</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-theme.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="http://code.jquery.com/jquery.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="#">Shopper</a> </div>
+        
+        <!--/.nav-collapse --> 
+    </div>
+</nav>
+<div class="container-fluid well">
+    <div class="lead-section">
+        <h1>SHOPPER</h1>
+        <p class="lead">Keep Track of Your Shopping List!</p>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="btn btn-danger btn-lg btn-block">Add Item to List</div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+<div class="container">
+    <section class="row text-center">
+        <div class="col-md-12">
+            <h3>The area below is initially hidden</h3>
+        </div>
+    </section>
+    <section class="row">
+        <div class="col-md-3"> </div>
+        <div class="col-md-4">
+            <label for="addItem">Add Item</label>
+            <input id="addItem" class="form-control" placeholder="Ex: Apples">
+        </div>
+        <div class="col-md-2">
+            <label>&nbsp;</label>
+            <div class="btn btn-info btn-lg btn-block">Add Item to List</div>
+        </div>
+    </section>
+    <hr />
+    <section class="row">
+        <div class="col-md-12 item text-center"><span class="item-status no-checkmark"></span> Apples <span class="item-delete"></span></div>
+        <div class="col-md-12 item text-center"><span class="item-status no-checkmark"></span> Pears <span class="item-delete"></span></div>
+        <div class="col-md-12 item text-center"><span class="item-status no-checkmark"></span> Ketchup <span class="item-delete"></span></div>
+    </section>
+</div>
+</div>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
