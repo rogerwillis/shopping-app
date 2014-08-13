@@ -2,17 +2,17 @@
 padding: 40px 15px 0px 0;
 text-align: center;
 color:#fff;
-
 }
-.container-fluid.well{background:#000;}
+.container-fluid.well{background:#000; color:#fff;}
 .logo{margin:30px;}
 
 .item {border-bottom: 1px solid #ccc; padding:22px 10px 13px 10px;}
+.item-disable {background:#000;color:#fff;}
 .item:hover {background:#f5f5f5; cursor:pointer}
 .item-status {float:left;}
 .item-delete {float:right;}
 
-.item-status.no-checkmark { background:url(../images/checkmark-inactive.png);width: 21px;
+.item-status{ background:url(../images/checkmark-inactive.png);width: 21px;
 height: 19px;cursor:pointer;}
 
 .item-status.checkmark { background:url(../images/checkmark-active.png);width: 21px;
@@ -23,6 +23,9 @@ width: 30px;
 height: 30px;
 cursor: pointer;
 }
+.item-error {display:none; color:red;}
+
+.strike-out {text-decoration:line-through}
 
 .item-delete:hover, .item-status:hover {opacity:.3;}
 
@@ -31,3 +34,13 @@ cursor: pointer;
 .form-control {
 	height: 47px; }
 	
+.add-items {display:none;}
+
+.items-list{margin-bottom:40px;}
+footer {
+	width:100%;
+	position:fixed;
+	bottom:0;
+	left:0;
+	background:#000; padding:5px; color:#fff; font-size:12px;
+}
