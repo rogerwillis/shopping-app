@@ -1,10 +1,5 @@
 $(document).ready(function() {
 
-if($(".items-list .item").length){
-	$(this).text("Please Add an Item");
-	console.log("length less than zero");
-	}else{console.log($(".items-list div").length);}
-
 function doCompletedItemsExist(){
 if($(".deleted-items-list div").length) {
  $('.completed-title').show();
@@ -35,13 +30,25 @@ if($(".deleted-items-list div").length) {
     $(".add-item-to-list").on("click", function() {
         var inputVal = $("#addItem").val();
         if (inputVal != "") {
+			var inputExists = $('.item-text').text().indexOf(inputVal) > -1;
+			if (inputExists) {
+   			 $('.item-error').text("Hey Jerky! "+inputVal+" already exist!").fadeIn().delay(1500).fadeOut();
+		}
+		else{
+			
             $(".items-list").prepend('<div class="col-md-12 item text-center"><span class="item-status no-checkmark"></span><span class="item-text"> ' + inputVal + '</span><span class="item-delete"></span></div>');
             $("#addItem").val("");
-			
 			var itemsList = $('.items-list').html();
    			localStorage.setItem('itemsList', itemsList);
+			}
+		
+			
+			
    
-   
+   		
+		
+
+
         } else {
 			$('.item-error').fadeIn().delay(1000).fadeOut();
             
@@ -50,6 +57,22 @@ if($(".deleted-items-list div").length) {
 
 
     });
+	
+	/*Trigger Button Click on Enter Button Press*/
+	$("#addItem").keyup(function(event){
+		if(event.keyCode == 13){
+			$(".add-item-to-list").click();
+		}
+	});
+	
+	/*Trigger Button Click on Escape Button Press*/
+	$("body").keyup(function(event){
+		if(event.keyCode == 27){
+			$(".done").click();
+		}
+	});
+	
+	
 	
 	if(localStorage.getItem('itemsList')) {
 $('.items-list').html(localStorage.getItem('itemsList'));

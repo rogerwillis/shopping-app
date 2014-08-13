@@ -1,3 +1,5 @@
+body{margin: 0 0 70px 0;}
+
 .lead-section {
 padding: 40px 15px 0px 0;
 text-align: center;
@@ -17,6 +19,8 @@ height: 19px;cursor:pointer;}
 
 .item-status.checkmark { background:url(../images/checkmark-active.png);width: 21px;
 height: 19px; cursor:pointer;}
+.item-status.no-checkmark:hover { background:url(../images/checkmark-active.png);width: 21px;
+height: 19px; cursor:pointer;opacity:1;}
 
 .item-delete{ background: url(../images/delete.png) no-repeat;
 width: 30px;
